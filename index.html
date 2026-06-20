@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argatyana U. Wibawa — Marketing Coordinator · Creative Director · Filmmaker</title>
+  <template id="__bundler_thumbnail" data-bg-color="#000000">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#000000" />
+      <text x="600" y="380" text-anchor="middle" font-family="Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="180" fill="#ffffff" letter-spacing="-4">ARGA</text>
+      <text x="600" y="460" text-anchor="middle" font-family="Roboto, Helvetica, Arial, sans-serif" font-style="italic" font-weight="700" font-size="80" fill="#e63946">Wibawa</text>
+      <line x1="500" y1="510" x2="700" y2="510" stroke="#e63946" stroke-width="3" />
+    </svg>
+  </template>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000000;
+      --bg2: #0c0c0c;
+      --fg: #ffffff;
+      --fg-muted: #ffffff;
+      --accent: #e63946;
+      --accent-light: #ff4d5e;
+      --rule: #1f1f1f;
+      --serif: 'Roboto', Helvetica, Arial, sans-serif;
+      --sans: 'Roboto', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 72px;
+      background: linear-gradient(to bottom, var(--bg) 60%, transparent);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 48px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--fg-muted);
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent-light); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      padding: 160px 72px 100px;
+      border-bottom: 1px solid var(--rule);
+      gap: 80px;
+    }
+    .hero-left {
+      align-self: center;
+      text-align: left;
+    }
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(82px, 9vw, 142px);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.025em;
+      margin-bottom: 48px;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .hero-desc {
+      font-size: 26px;
+      color: var(--fg-muted);
+      max-width: 640px;
+      line-height: 1.6;
+      margin-bottom: 60px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 22px 48px;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: var(--sans);
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+    .btn-ghost {
+      color: var(--fg-muted);
+      text-decoration: none;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 6px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--fg); border-color: var(--fg-muted); }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 56px;
+    }
+    .hero-portrait {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 3/4;
+      background: var(--bg2);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      width: 100%;
+      max-width: 420px;
+    }
+    .stat {
+      border-top: 1px solid var(--rule);
+      padding-top: 20px;
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--accent-light);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      font-weight: 500;
+    }
+
+    /* ── SECTION BASE ── */
+    section {
+      padding: 140px 72px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(47px, 5.6vw, 75px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin-bottom: 64px;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    /* ── ABOUT ── */
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .about-body {
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--fg-muted);
+    }
+    .about-body strong {
+      color: var(--fg);
+      font-weight: 600;
+    }
+    .about-body p + p { margin-top: 24px; }
+    .about-side {}
+    .service-list {
+      list-style: none;
+      margin-top: 0;
+    }
+    .service-list li {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+    }
+    .service-list li:last-child { border-bottom: 1px solid var(--rule); }
+    .service-num {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      min-width: 32px;
+    }
+    .service-name {
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+    }
+
+    /* ── CLIENTS ── */
+    #clients {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .clients-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 56px;
+    }
+    .clients-marquee-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+    .clients-marquee-wrap::before,
+    .clients-marquee-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+    }
+    .clients-marquee-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg), transparent);
+    }
+    .clients-marquee-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg), transparent);
+    }
+    .clients-marquee {
+      display: flex;
+      gap: 0;
+      animation: marquee 22s linear infinite;
+      width: max-content;
+    }
+    .clients-marquee:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .client-item {
+      padding: 0 64px;
+      border-left: 1px solid var(--rule);
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--fg-muted);
+      white-space: nowrap;
+      transition: color 0.3s;
+    }
+    .client-item:hover { color: var(--fg); }
+
+    /* ── WORK ── */
+    #work .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .work-card {
+      position: relative;
+      aspect-ratio: 4/3;
+      background: var(--bg2);
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .work-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: grayscale(15%) brightness(0.92);
+    }
+    .work-card:hover img {
+      transform: scale(1.04);
+      filter: grayscale(0%) brightness(1);
+    }
+    .work-card-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .work-card:hover .work-card-label { transform: translateY(0); }
+    .work-card-client {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 8px;
+    }
+    .work-card-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .work-card-type {
+      font-size: 14px;
+      color: var(--fg-muted);
+      margin-top: 6px;
+    }
+    .work-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #3a3a3a;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 24px;
+    }
+    .work-card.feature {
+      grid-column: span 2;
+      aspect-ratio: unset;
+      min-height: 480px;
+    }
+
+    /* ── CASE STUDY ── */
+    #case-study {}
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 120px;
+    }
+    .scope-card {
+      background: var(--bg);
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: background 0.2s;
+    }
+    .scope-card:hover { background: var(--bg2); }
+    .scope-num {
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .scope-card h3 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    .scope-card p {
+      font-size: 17px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+    }
+    .scope-card strong {
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .cs-deepdive-eyebrow {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: block;
+    }
+    .cs-deepdive-title {
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.4vw, 60px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin-bottom: 64px;
+    }
+    .cs-deepdive-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .cs-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      margin-bottom: 100px;
+      align-items: start;
+    }
+    .cs-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .cs-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 20px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .cs-meta-item:last-child { border-bottom: 1px solid var(--rule); }
+    .cs-meta-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .cs-meta-value {
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--fg);
+      line-height: 1.4;
+    }
+    .cs-headline h3 {
+      font-family: var(--serif);
+      font-size: clamp(34px, 3.6vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin-bottom: 28px;
+    }
+    .cs-headline h3 em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .cs-headline p {
+      font-size: 19px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .cs-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 120px;
+    }
+    .cs-metric {
+      background: var(--bg);
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: background 0.2s;
+    }
+    .cs-metric:hover { background: var(--bg2); }
+    .cs-metric-num {
+      font-family: var(--serif);
+      font-size: clamp(56px, 5.5vw, 84px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--accent-light);
+    }
+    .cs-metric-label {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--fg);
+    }
+    .cs-metric-label span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--fg-muted);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .cs-approach { margin-bottom: 120px; }
+    .cs-approach-title,
+    .cs-platforms-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.4vw, 46px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 48px;
+    }
+    .cs-approach-title em,
+    .cs-platforms-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .cs-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 56px 64px;
+    }
+    .cs-pillar {
+      position: relative;
+      padding-top: 28px;
+      border-top: 1px solid var(--rule);
+    }
+    .cs-pillar-num {
+      position: absolute;
+      top: 28px;
+      right: 0;
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .cs-pillar h4 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      padding-right: 50px;
+    }
+    .cs-pillar p {
+      font-size: 17px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+    }
+
+    .cs-platforms-lede {
+      font-size: 18px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      max-width: 820px;
+      margin: -28px 0 48px;
+    }
+    .cs-platforms-lede strong {
+      color: var(--accent-light);
+      font-weight: 600;
+    }
+    .cs-platform-list {
+      list-style: none;
+    }
+    .cs-platform-list li {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+      align-items: baseline;
+    }
+    .cs-platform-list li:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+    .cs-platform-name {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .cs-platform-stat {
+      font-size: 17px;
+      color: var(--fg-muted);
+      line-height: 1.5;
+    }
+
+    .cs-meta-value a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .cs-meta-value a:hover {
+      color: var(--accent-light);
+      border-color: var(--accent-light);
+    }
+    .cs-meta-value .ext-arrow {
+      display: inline-block;
+      font-size: 0.85em;
+      margin-left: 4px;
+      transition: transform 0.2s;
+    }
+    .cs-meta-value a:hover .ext-arrow { transform: translate(2px, -2px); }
+
+    .cs-outcome {
+      margin-top: 56px;
+      padding: 36px 40px;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cs-outcome-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .cs-outcome p {
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--fg);
+    }
+    .cs-outcome strong { color: var(--accent-light); font-weight: 600; }
+
+    /* ── BRAND TRANSFORMATION ── */
+    .cs-transformation {
+      margin-bottom: 120px;
+    }
+    .cs-transformation-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.4vw, 46px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .cs-transformation-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .cs-transformation-lede {
+      font-size: 18px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+    .cs-phase {
+      border-top: 1px solid var(--rule);
+      padding: 40px 0 56px;
+    }
+    .cs-phase:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+    .cs-phase-header {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .cs-phase-tag {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 6px 14px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+    }
+    .cs-phase-headline {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .cs-phase-desc {
+      font-size: 16px;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+    .cs-phase-images {
+      display: grid;
+      gap: 16px;
+    }
+    .cs-phase-images.cols-2 { grid-template-columns: 1fr 1fr; }
+    .cs-phase-images.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .cs-phase-frame {
+      background: var(--bg2);
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .cs-phase-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .cs-phase-caption {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      padding: 14px 18px;
+      border-top: 1px solid var(--rule);
+      background: var(--bg);
+    }
+
+    /* ── INFOGRAPHIC ── */
+    .cs-infographic {
+      margin-bottom: 64px;
+    }
+    .cs-infographic-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .cs-infographic-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.4vw, 46px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .cs-infographic-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+    .cs-infographic-caption {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+    .cs-infographic-frame {
+      background: var(--bg2);
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      margin-bottom: 80px;
+    }
+    .cs-infographic-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── PLATFORMS ── */
+    #platforms {}
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .platform-card {
+      background: var(--bg);
+      padding: 44px 28px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+    .platform-card:hover { background: var(--bg2); }
+    .platform-icon {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: -0.03em;
+      transition: border-color 0.2s;
+    }
+    .platform-card:hover .platform-icon { border-color: var(--accent); }
+    .platform-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .platform-desc {
+      font-size: 15px;
+      color: var(--fg-muted);
+      line-height: 1.55;
+    }
+
+    /* ── TOOLS ── */
+    #tools {}
+    .tools-intro {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+      align-items: end;
+    }
+    .tools-intro p {
+      font-size: 20px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      max-width: 540px;
+      justify-self: end;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .tools-column {
+      background: var(--bg);
+      padding: 40px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .tools-category {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: 4px;
+    }
+    .tools-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .tools-list li {
+      padding: 12px 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--fg);
+      border-top: 1px solid var(--rule);
+      line-height: 1.4;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .tools-list li:first-child { border-top: none; padding-top: 0; }
+    .tools-list li:hover {
+      color: var(--accent-light);
+      padding-left: 8px;
+    }
+    .tools-list li span {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--fg-muted);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    #certs {}
+    .certs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 8px;
+    }
+    .cert-card {
+      background: var(--bg2);
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .cert-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .cert-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .cert-caption {
+      padding: 20px 24px;
+      border-top: 1px solid var(--rule);
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cert-caption .cert-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .cert-caption .cert-meta {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    /* ── EXPERIENCE ── */
+    #experience .exp-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 100px;
+    }
+    .exp-sidebar {}
+    .exp-sidebar p {
+      font-size: 18px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+    }
+    .exp-list { list-style: none; }
+    .exp-item {
+      border-top: 1px solid var(--rule);
+      padding: 40px 0;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+    }
+    .exp-item:last-child { border-bottom: 1px solid var(--rule); }
+    .exp-period {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--fg-muted);
+      padding-top: 6px;
+    }
+    .exp-role {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+    .exp-company {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent-light);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .exp-detail {
+      font-size: 17px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+      border-bottom: none;
+    }
+    .contact-left {}
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(55px, 7.2vw, 99px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      margin-bottom: 40px;
+    }
+    .contact-title em { font-style: italic; color: var(--accent-light); }
+    .contact-body {
+      font-size: 19px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      max-width: 460px;
+      margin-bottom: 48px;
+    }
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .contact-link {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: var(--fg);
+      transition: color 0.2s;
+    }
+    .contact-link:last-child { border-bottom: 1px solid var(--rule); }
+    .contact-link:hover { color: var(--accent-light); }
+    .contact-link-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .contact-link:hover .contact-link-label { color: var(--accent); }
+    .contact-link-value {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .contact-arrow {
+      font-size: 24px;
+      opacity: 0.4;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .contact-link:hover .contact-arrow { opacity: 1; transform: translateX(4px); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--rule);
+    }
+    footer p {
+      font-size: 14px;
+      color: var(--fg-muted);
+      letter-spacing: 0.05em;
+    }
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--fg-muted);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--fg); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 24px 40px; }
+      .nav-links { gap: 32px; }
+      .hero { padding: 140px 40px 80px; gap: 56px; }
+      section { padding: 110px 40px; }
+      footer { padding: 32px 40px; }
+      #about .about-grid { gap: 64px; }
+      #experience .exp-grid { grid-template-columns: 280px 1fr; gap: 64px; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 13px; }
+      .hero { grid-template-columns: 1fr; padding: 120px 28px 64px; gap: 48px; }
+      .hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+      .hero-portrait { max-width: 280px; }
+      .hero-stats { max-width: 100%; }
+      section { padding: 80px 28px; }
+      .section-title { margin-bottom: 48px; }
+      #about .about-grid { grid-template-columns: 1fr; gap: 56px; }
+      #work .work-grid { grid-template-columns: 1fr 1fr; }
+      .work-card.feature { grid-column: span 2; }
+      #experience .exp-grid { grid-template-columns: 1fr; gap: 48px; }
+      .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
+      #contact { grid-template-columns: 1fr; gap: 56px; }
+      .cs-intro { grid-template-columns: 1fr; gap: 56px; margin-bottom: 72px; }
+      .cs-metrics { grid-template-columns: repeat(2, 1fr); margin-bottom: 80px; }
+      .cs-pillars { grid-template-columns: 1fr; gap: 40px; }
+      .cs-platform-list li { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
+      .certs-grid { grid-template-columns: 1fr; gap: 20px; }
+      .cs-phase-images.cols-2 { grid-template-columns: 1fr; }
+      .cs-phase-images.cols-3 { grid-template-columns: 1fr; }
+      .cs-transformation { margin-bottom: 80px; }
+      .scope-grid { grid-template-columns: 1fr; margin-bottom: 80px; }
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .tools-intro { grid-template-columns: 1fr; gap: 32px; align-items: start; margin-bottom: 56px; }
+      .tools-intro p { justify-self: start; }
+      .tools-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { flex-direction: column; gap: 16px; padding: 32px 28px; text-align: center; }
+    }
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      #work .work-grid { grid-template-columns: 1fr; }
+      .work-card.feature { grid-column: span 1; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-cta { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost { text-align: center; }
+      .cs-metrics { grid-template-columns: 1fr; }
+      .platforms-grid { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Argatyana U. Wibawa</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#case-study">Marketing</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom: 1px solid var(--rule);">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Marketing Coordinator &nbsp;|&nbsp; Digital Marketer &nbsp;|&nbsp; Creative Director &nbsp;|&nbsp; Commercial Filmmaker &amp; Photographer</p>
+      <h1 class="hero-name">Argatyana U.<br /><em>Wibawa</em></h1>
+      <p class="hero-desc">
+        A creative jack of all trades. More than a decade of expertise in photo-video content production, creative marketing and digital marketing. Helping brands tell their unique stories to the world.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">View Selected Creative Works</a>
+        <a href="#contact" class="btn-ghost">Get in Touch →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-portrait">
+        <img src="assets/arga-portrait.jpeg" alt="Argatyana U. Wibawa portrait" />
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Local &amp; Global Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Core Disciplines</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 32px;">Strategy meets<br /><em>storytelling</em></h2>
+        <div class="about-body">
+          <p>
+            Arga is a professional, result-driven <strong>digital marketer, creative director, social media strategist, creator, and problem solver</strong> with 10+ years bridging technical know-how, technology implementation, AI workflow, visual storytelling, and strategic marketing.
+          </p>
+          <p>
+            He specializes in creative direction, digital marketing, content production, B2C/B2B branding, and social media strategy — helping brands and companies tell their <strong>authentic stories that drive growth</strong>. From scalable digital campaigns to cinematic content, he bridges a holistic approach shaped by an Information Systems background and deep creative industry experience.
+          </p>
+          <p>
+            His journey began in <strong>Germany</strong>, where he discovered the power of merging digital media with cultural narratives. Today, he serves as the marketing coordinator at <strong>Planville</strong>, a top German green energy company, while running his own creative agency, <strong>Saujana Project</strong>.
+          </p>
+          <p>
+            Trusted by local and international brands including Canva, Samsung Indonesia, Canon Asia, Canon Germany, Ford Europe, Sony USA, POCO Global, BRODO Indonesia, EMBA Group, Tobatenun, and more.
+          </p>
+          <p style="color: var(--accent-light); font-style: italic; font-family: var(--serif); font-size: 20px; margin-top: 32px;">
+            Let's collaborate creatively and strategically.
+          </p>
+        </div>
+      </div>
+      <div class="about-side">
+        <p class="section-label" style="margin-bottom: 24px;">My Expertise That Can Help You</p>
+        <ul class="service-list">
+          <li>
+            <span class="service-num">01</span>
+            <span class="service-name">Creative Strategy &amp; Brand Positioning</span>
+          </li>
+          <li>
+            <span class="service-num">02</span>
+            <span class="service-name">Photo &amp; Video Content Production</span>
+          </li>
+          <li>
+            <span class="service-num">03</span>
+            <span class="service-name">Digital Marketing &amp; Ads Management</span>
+          </li>
+          <li>
+            <span class="service-num">04</span>
+            <span class="service-name">Social Media Strategy &amp; Management</span>
+          </li>
+          <li>
+            <span class="service-num">05</span>
+            <span class="service-name">Brand Identity &amp; Visual Direction</span>
+          </li>
+          <li>
+            <span class="service-num">06</span>
+            <span class="service-name">Campaign Development &amp; Storytelling</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS MARQUEE -->
+  <section id="clients" style="padding-top: 90px; padding-bottom: 90px;">
+    <div class="clients-header">
+      <p class="section-label" style="margin-bottom: 0;">Clients &amp; Brands</p>
+      <p style="font-size: 16px; color: var(--fg-muted);">Local &amp; international</p>
+    </div>
+    <div class="clients-marquee-wrap">
+      <div class="clients-marquee">
+        <!-- duplicated for seamless loop -->
+        <span class="client-item">Canva</span>
+        <span class="client-item">Samsung Indonesia</span>
+        <span class="client-item">BRODO</span>
+        <span class="client-item">EMBA Group</span>
+        <span class="client-item">Canon Germany</span>
+        <span class="client-item">FORD Europe</span>
+        <span class="client-item">POCO Global</span>
+        <span class="client-item">SONY USA</span>
+        <span class="client-item">Tobatenun</span>
+        <span class="client-item">Wonderful Indonesia</span>
+        <span class="client-item">SIGMA Lens</span>
+        <span class="client-item">Santika Hotels</span>
+        <span class="client-item">Daniel Wellington</span>
+        <span class="client-item">MVMT Watches</span>
+        <span class="client-item">ELOI COCO</span>
+        <span class="client-item">Canva</span>
+        <span class="client-item">Samsung Indonesia</span>
+        <span class="client-item">BRODO</span>
+        <span class="client-item">EMBA Group</span>
+        <span class="client-item">Canon Germany</span>
+        <span class="client-item">FORD Europe</span>
+        <span class="client-item">POCO Global</span>
+        <span class="client-item">SONY USA</span>
+        <span class="client-item">Tobatenun</span>
+        <span class="client-item">Wonderful Indonesia</span>
+        <span class="client-item">SIGMA Lens</span>
+        <span class="client-item">Santika Hotels</span>
+        <span class="client-item">Daniel Wellington</span>
+        <span class="client-item">MVMT Watches</span>
+        <span class="client-item">ELOI COCO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <p class="section-label">Selected Creative Works</p>
+    <h2 class="section-title">Creative Projects &amp; <em>Campaigns</em></h2>
+    <div class="work-grid">
+      <a class="work-card feature" href="https://www.behance.net/gallery/219325473/CANVA-Editorial-Fashion-Video-Photo-Production" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3b031e219325473.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Canva Editorial Fashion campaign" />
+        <div class="work-card-label">
+          <p class="work-card-client">Canva</p>
+          <p class="work-card-title">Editorial Fashion — Video &amp; Photo Production</p>
+          <p class="work-card-type">Creative Direction · Cinematography · Photography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/219324803/TOBATENUN-Brand-Film-Photography-Production" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/5cb94b219324803.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Tobatenun brand film" />
+        <div class="work-card-label">
+          <p class="work-card-client">Tobatenun</p>
+          <p class="work-card-title">Brand Film &amp; Photography Production</p>
+          <p class="work-card-type">Creative Direction · Brand &amp; Content Strategy · Cinematography · Photography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/219323499/COTE-D-AZUR-Commercial-Video-Production" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4b0536219323499.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Côte d'Azur commercial" />
+        <div class="work-card-label">
+          <p class="work-card-client">Côte d'Azur</p>
+          <p class="work-card-title">Commercial Video Production</p>
+          <p class="work-card-type">Creative Direction · Cinematography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/193195747/EMBA-GROUP-Corporate-Branding" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b08165193195747.Y3JvcCwxMTgwLDkyMywzNDEsNjQ.jpg" alt="EMBA Group corporate branding" />
+        <div class="work-card-label">
+          <p class="work-card-client">EMBA Group</p>
+          <p class="work-card-title">Corporate Branding &amp; Film</p>
+          <p class="work-card-type">Creative Direction · Brand &amp; Content Strategy · Cinematography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/159837349/POCO-X4-PRO-5G-Campaign" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/01f73f159837349.Y3JvcCw4MDgsNjMyLDAsMA.jpeg" alt="POCO X4 Pro 5G campaign" />
+        <div class="work-card-label">
+          <p class="work-card-client">POCO Global</p>
+          <p class="work-card-title">POCO X4 Pro 5G Campaign</p>
+          <p class="work-card-type">Creative Direction · Cinematography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/130324143/Brodo-Indonesia-Active-Zeal-KembaliAktif" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ecfbbf130324143.Y3JvcCwxOTk5LDE1NjQsMCwxOQ.jpeg" alt="Brodo Active Zeal campaign" />
+        <div class="work-card-label">
+          <p class="work-card-client">Brodo Indonesia</p>
+          <p class="work-card-title">Active Zeal — #KembaliAktif</p>
+          <p class="work-card-type">Creative Direction · Brand &amp; Content Strategy · Photography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/125862441/BRODO-2021-ExploreTheFuture-(PART-THREE)" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/022a23125862441.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Brodo Explore The Future part three" />
+        <div class="work-card-label">
+          <p class="work-card-client">Brodo</p>
+          <p class="work-card-title">#ExploreTheFuture — Part Three</p>
+          <p class="work-card-type">Creative Direction · Cinematography · Photography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/122304045/BRODO-2021-ExploreTheFuture-(PART-TWO)" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/594e9f122304045.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Brodo Explore The Future part two" />
+        <div class="work-card-label">
+          <p class="work-card-client">Brodo</p>
+          <p class="work-card-title">#ExploreTheFuture — Part Two</p>
+          <p class="work-card-type">Creative Direction · Cinematography · Photography</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://www.behance.net/gallery/116818447/BRODO-2021-ExploreTheFuture-(PART-ONE)" target="_blank" rel="noopener">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e40f90116818447.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Brodo Explore The Future part one" />
+        <div class="work-card-label">
+          <p class="work-card-client">Brodo</p>
+          <p class="work-card-title">#ExploreTheFuture — Part One</p>
+          <p class="work-card-type">Creative Direction · Cinematography · Photography</p>
+        </div>
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL MARKETING PORTFOLIO -->
+  <section id="case-study">
+    <p class="section-label">Digital Marketing Portfolio</p>
+    <h2 class="section-title">Full-Spectrum <em>Marketing</em></h2>
+
+    <div class="scope-grid">
+      <div class="scope-card">
+        <span class="scope-num">01 — Operations</span>
+        <h3>Marketing Coordination &amp; Operations</h3>
+        <p>Acting as the <strong>strategic and operational bridge</strong> between Head of Marketing and the wider team — managing daily marketing operations, coordinating initiatives across owned, paid, and earned channels, leading marketing tech-stack audits, pioneering AI-based workflows, and supporting HR on applicant screening and employer branding.</p>
+      </div>
+      <div class="scope-card">
+        <span class="scope-num">02 — Social &amp; Content</span>
+        <h3>Social Media Strategy &amp; Content</h3>
+        <p>End-to-end ownership of social media — from <strong>creative direction to daily execution</strong>. Brand guidelines, content strategy, production workflows, and platform-native video across Instagram, TikTok, YouTube Shorts, Facebook, and LinkedIn. Detailed featured case study below.</p>
+      </div>
+      <div class="scope-card">
+        <span class="scope-num">03 — Search &amp; AI</span>
+        <h3>SEO &amp; AI SEO Support</h3>
+        <p>Traditional SEO plus the new search frontier: <strong>GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and AIO (AI Optimization)</strong>. Helping brands stay discoverable as search shifts from blue links to AI-generated answers across ChatGPT, Claude, Gemini, and Perplexity.</p>
+      </div>
+    </div>
+
+    <span class="cs-deepdive-eyebrow">Featured Case Study</span>
+    <h2 class="cs-deepdive-title">Planville's <em>Digital Growth</em></h2>
+
+    <div class="cs-intro">
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Company</span>
+          <span class="cs-meta-value"><a href="https://www.planville.de" target="_blank" rel="noopener">Planville GmbH<span class="ext-arrow">↗</span></a></span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-value">Green Energy · Germany</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Marketing Coordinator, Social Media Strategist, Content Manager, Community Manager, SEO &amp; AI SEO Support</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span class="cs-meta-value">May 2025 — Present · 12+ months in charge</span>
+        </div>
+      </div>
+      <div class="cs-headline">
+        <h3>From fragmented presence to a <em>consistent content engine</em>.</h3>
+        <p>Took ownership of Planville's entire social media ecosystem from creative direction to daily execution during a pivotal social media &amp; content strategy reboot. Rebuilt strategy, production workflows, and brand guidelines across five platforms, turning siloed channels into a measurable growth engine.</p>
+      </div>
+    </div>
+
+    <div class="cs-metrics">
+      <div class="cs-metric">
+        <div class="cs-metric-num">4.7M+</div>
+        <div class="cs-metric-label">Total Organic Video Views <span>cross-platform · zero paid spend</span></div>
+      </div>
+      <div class="cs-metric">
+        <div class="cs-metric-num">1.01M</div>
+        <div class="cs-metric-label">Instagram Profile Views <span>in 9 months · +25% follower growth</span></div>
+      </div>
+      <div class="cs-metric">
+        <div class="cs-metric-num">6.47%</div>
+        <div class="cs-metric-label">Instagram Engagement Rate <span>vs. industry benchmark</span></div>
+      </div>
+      <div class="cs-metric">
+        <div class="cs-metric-num">13.62%</div>
+        <div class="cs-metric-label">LinkedIn Engagement Rate <span>2–5× industry benchmark</span></div>
+      </div>
+      <div class="cs-metric">
+        <div class="cs-metric-num">4.15M</div>
+        <div class="cs-metric-label">Facebook Views <span>+156% page visit growth</span></div>
+      </div>
+      <div class="cs-metric">
+        <div class="cs-metric-num">+680%</div>
+        <div class="cs-metric-label">LinkedIn Impression Increase <span>34.83K total impressions</span></div>
+      </div>
+    </div>
+
+    <div class="cs-infographic">
+      <div class="cs-infographic-header">
+        <h3 class="cs-infographic-title">Visualization of <em>Improvements</em></h3>
+      </div>
+      <div class="cs-infographic-frame">
+        <img src="assets/planville/infographic.jpg" alt="Infographic summary of Planville digital marketing transformation by Arga Wibawa" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="cs-transformation">
+      <h3 class="cs-transformation-title">Brand <em>Transformation</em></h3>
+      <p class="cs-transformation-lede">A visual record of the relaunch — from a fragmented, inconsistent presence to a cohesive, on-brand content engine. Three moments in time tell the whole story.</p>
+
+      <div class="cs-phase">
+        <div class="cs-phase-header">
+          <span class="cs-phase-tag">Before</span>
+          <p class="cs-phase-headline">Fragmented identity, inconsistent output.</p>
+        </div>
+        <p class="cs-phase-desc">Ad-hoc posts, mismatched visual language, no clear content pillars — a presence that didn't reflect Planville's leadership in the German green-energy market.</p>
+        <div class="cs-phase-images cols-2">
+          <div class="cs-phase-frame">
+            <img src="assets/planville/before-1.jpg" alt="Planville content before rebranding" loading="lazy" />
+            <p class="cs-phase-caption">Content rebranding · reference 01</p>
+          </div>
+          <div class="cs-phase-frame">
+            <img src="assets/planville/before-2.jpg" alt="Planville content before rebranding, second example" loading="lazy" />
+            <p class="cs-phase-caption">Content rebranding · reference 02</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-phase">
+        <div class="cs-phase-header">
+          <span class="cs-phase-tag">After</span>
+          <p class="cs-phase-headline">Unified brand identity, scaled production.</p>
+        </div>
+        <p class="cs-phase-desc">Cohesive face-to-camera corporate identity, consistent visual system, and a production workflow shipping 6+ posts per week across every platform.</p>
+        <div class="cs-phase-images cols-2">
+          <div class="cs-phase-frame">
+            <img src="assets/planville/after-1.jpg" alt="Planville content after rebranding" loading="lazy" />
+            <p class="cs-phase-caption">Post-relaunch content system</p>
+          </div>
+          <div class="cs-phase-frame">
+            <img src="assets/planville/after-2.jpg" alt="Planville content status January 2026" loading="lazy" />
+            <p class="cs-phase-caption">Status · January 30, 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-phase">
+        <div class="cs-phase-header">
+          <span class="cs-phase-tag">Current</span>
+          <p class="cs-phase-headline">A live, multi-platform content engine — March 2026.</p>
+        </div>
+        <p class="cs-phase-desc">Today, Planville runs a tightly-coordinated presence across Instagram, TikTok, and YouTube Shorts — with face-to-camera storytelling, clear platform-native formatting, and steady weekly output.</p>
+        <div class="cs-phase-images cols-3">
+          <div class="cs-phase-frame">
+            <img src="assets/planville/current-instagram.jpg" alt="Planville Instagram, March 2026" loading="lazy" />
+            <p class="cs-phase-caption">Instagram · March 2026</p>
+          </div>
+          <div class="cs-phase-frame">
+            <img src="assets/planville/current-tiktok.jpg" alt="Planville TikTok, March 2026" loading="lazy" />
+            <p class="cs-phase-caption">TikTok · March 2026</p>
+          </div>
+          <div class="cs-phase-frame">
+            <img src="assets/planville/current-youtube.jpg" alt="Planville YouTube Shorts, March 2026" loading="lazy" />
+            <p class="cs-phase-caption">YouTube Shorts · March 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-approach">
+      <h3 class="cs-approach-title">The <em>Approach</em></h3>
+      <div class="cs-pillars">
+        <div class="cs-pillar">
+          <span class="cs-pillar-num">01</span>
+          <h4>Strategy &amp; Positioning</h4>
+          <p>Audited a fragmented multi-platform presence, rebuilt the content strategy around clear pillars, and aligned creative output with Planville's brand relaunch and commercial goals.</p>
+        </div>
+        <div class="cs-pillar">
+          <span class="cs-pillar-num">02</span>
+          <h4>Production &amp; Workflow</h4>
+          <p>Established brand guidelines, production standards, and an Asana-based workflow — enabling consistent weekly output across five platforms without growing the team.</p>
+        </div>
+        <div class="cs-pillar">
+          <span class="cs-pillar-num">03</span>
+          <h4>Content &amp; Storytelling</h4>
+          <p>Directed and produced video-first content (Reels, Shorts, TikTok) that translated dense green-energy topics into accessible, scroll-stopping stories for German homeowners.</p>
+        </div>
+        <div class="cs-pillar">
+          <span class="cs-pillar-num">04</span>
+          <h4>AI-Powered Operations</h4>
+          <p>Pioneered AI workflows (Claude AI &amp; Claude Code) inside the marketing stack — cutting repetitive work and acting as a cost-effective replacement across multiple marketing functions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-platforms">
+      <h3 class="cs-platforms-title">Channel <em>Performance</em></h3>
+      <ul class="cs-platform-list">
+        <li>
+          <span class="cs-platform-name">Instagram</span>
+          <span class="cs-platform-stat">1.01M profile views · +25% follower growth · 6.47% engagement (vs. benchmark)</span>
+        </li>
+        <li>
+          <span class="cs-platform-name">Facebook</span>
+          <span class="cs-platform-stat">4.15M views · +156% page visit growth</span>
+        </li>
+        <li>
+          <span class="cs-platform-name">TikTok</span>
+          <span class="cs-platform-stat">94% FYP distribution · short-form video lead</span>
+        </li>
+        <li>
+          <span class="cs-platform-name">YouTube Shorts</span>
+          <span class="cs-platform-stat">87.6% feed traffic share</span>
+        </li>
+        <li>
+          <span class="cs-platform-name">LinkedIn</span>
+          <span class="cs-platform-stat">34.83K impressions · +680% impression increase · 13.62% engagement (2–5× benchmark)</span>
+        </li>
+      </ul>
+      <div class="cs-outcome">
+        <span class="cs-outcome-label">Beyond the KPIs</span>
+        <p>Every social KPI we set was reached but the bigger story is being more relevant to target audience who actually can drive conversion than just "viral" or numbers. The content engine and platform strategy I built <strong>actively drove qualified lead generation into Planville's CRM pipeline</strong>, turning reach and engagement into real conversions and then sales consultancy rather than vanity metrics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section id="platforms">
+    <h2 class="section-title">Platforms That I <em>Handle</em></h2>
+    <div class="platforms-grid">
+      <div class="platform-card">
+        <div class="platform-icon">IG</div>
+        <p class="platform-name">Instagram</p>
+        <p class="platform-desc">Reels, stories, carousels &amp; community building — the engagement engine.</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">TT</div>
+        <p class="platform-name">TikTok</p>
+        <p class="platform-desc">Short-form video built for discovery, virality, and platform-native culture.</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">YT</div>
+        <p class="platform-name">YouTube Shorts</p>
+        <p class="platform-desc">Vertical video that turns long-form authority into scroll-stopping moments.</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">FB</div>
+        <p class="platform-name">Facebook</p>
+        <p class="platform-desc">Page growth, paid reach, and trust-building for established audiences.</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">LI</div>
+        <p class="platform-name">LinkedIn</p>
+        <p class="platform-desc">B2B narrative, thought leadership, and employer branding for serious buyers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="tools-intro">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 0;">Tools I <em>Use</em></h2>
+      </div>
+      <p>From cinematic creative production to AI-augmented marketing operations — the toolset I rely on to take projects from concept to measurable result.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tools-column">
+        <p class="tools-category">Creative Production</p>
+        <ul class="tools-list">
+          <li>Adobe Photoshop</li>
+          <li>Adobe Lightroom</li>
+          <li>Adobe Premiere Pro</li>
+          <li>Adobe After Effects</li>
+          <li>DaVinci Resolve</li>
+          <li>CapCut</li>
+          <li>Canva</li>
+        </ul>
+      </div>
+      <div class="tools-column">
+        <p class="tools-category">Marketing &amp; Analytics</p>
+        <ul class="tools-list">
+          <li>Meta Business Suite</li>
+          <li>Meta Ads Manager</li>
+          <li>YouTube Studio</li>
+          <li>Google Analytics</li>
+          <li>GoHighLevel</li>
+          <li>Ahrefs</li>
+          <li>Ubersuggest</li>
+        </ul>
+      </div>
+      <div class="tools-column">
+        <p class="tools-category">Project &amp; Workflow</p>
+        <ul class="tools-list">
+          <li>Asana</li>
+          <li>Notion</li>
+          <li>Google Workspace</li>
+          <li>Microsoft Office Suite</li>
+        </ul>
+      </div>
+      <div class="tools-column">
+        <p class="tools-category">AI &amp; Automation</p>
+        <ul class="tools-list">
+          <li>Claude AI</li>
+          <li>Claude Code</li>
+          <li>ChatGPT</li>
+          <li>Gemini</li>
+          <li>Perplexity</li>
+          <li>Higgsfield AI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Experience</p>
+    <div class="exp-grid">
+      <div class="exp-sidebar">
+        <h2 class="section-title" style="font-size: 41px; margin-bottom: 20px; white-space: nowrap;">Career <em>Journey</em></h2>
+        <p>More than a decade of creative work across Indonesia, Germany, and global markets — building brands, strategizing, and producing content that moves people.</p>
+      </div>
+      <ul class="exp-list">
+        <li class="exp-item">
+          <span class="exp-period">Jul 2025 — Present</span>
+          <div>
+            <p class="exp-role">Marketing Coordinator &amp; Assistant to Head of Marketing</p>
+            <p class="exp-company">Planville GmbH · Erkelenz, Germany (Remote)</p>
+            <p class="exp-detail">Strategic and operational bridge between Planville's Head of Marketing and the wider team — managing daily marketing operations, coordinating initiatives across owned, paid, and earned channels, and reporting directly to senior leadership. Leading marketing tech-stack audits (building the business case for Claude AI &amp; Claude Code as a cost-effective replacement across multiple marketing functions), pioneering Asana team management and AI-based workflows, and coordinating cross-functionally with HR on applicant screening and employer branding. Driving <strong>SEO &amp; AI SEO</strong> contribution — better overall UX, cleaner site layouting, and a stronger content and blog structure strategy designed to lift organic traffic and improve performance in GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization).</p>
+          </div>
+        </li>
+        <li class="exp-item">
+          <span class="exp-period">May 2025 — Present</span>
+          <div>
+            <p class="exp-role">Social Media Strategist &amp; Content Manager</p>
+            <p class="exp-company">Planville GmbH · Erkelenz, Germany (Remote)</p>
+            <p class="exp-detail">Took ownership of Planville's entire social media ecosystem from creative direction to daily execution during a pivotal social media &amp; content strategy reboot. Rebuilt the content strategy across five platforms (Instagram, Facebook, TikTok, YouTube Shorts, LinkedIn). In 12+ months: scaled total cross-platform organic video views past 4.7M (zero paid spend), drove 1.01M+ Instagram profile views with +25% follower growth and 6.47% engagement rate, generated 4.15M Facebook views with +156% page visit growth, and secured a 13.62% LinkedIn engagement rate — well above industry benchmark — with +680% impression growth. Every KPI was reached, but the bigger win was driving qualified lead generation into Planville's CRM pipeline rather than just vanity metrics. Established the workflows, brand guidelines, and production standards that turned a fragmented presence into a consistent content engine.</p></p>
+          </div>
+        </li>
+        <li class="exp-item">
+          <span class="exp-period">Oct 2020 — Present</span>
+          <div>
+            <p class="exp-role">Founder &amp; Creative Director</p>
+            <p class="exp-company">Saujana Project · Self-employed · Indonesia</p>
+            <p class="exp-detail">Founder, GM Creative Director and Video Director for commissioned productions. Transform collective ideas into authentic experiences that resonate with the client's audience — elevating brand potential, growing engagement and awareness through visuals and storytelling. Develop narrative, concept, and creative research; plan key visuals, production timelines, budgets, and crew. Notable work: Tobatenun brand film (Lake Toba, North Sumatra), EMBA Group corporate film, and the MANIFESTO spec ad for POCO Global.</p>
+          </div>
+        </li>
+        <li class="exp-item">
+          <span class="exp-period">Mar 2023 — Apr 2025</span>
+          <div>
+            <p class="exp-role">Video &amp; Photo Production Specialist</p>
+            <p class="exp-company">Canva · Contract · Indonesia (Remote)</p>
+            <p class="exp-detail">Official remote video production specialist and photographer for Canva. Managed, directed, and executed asset production briefs across various themes related to Indonesia for Canva's ever-growing stock library — from pre-production through completion. Collaborated closely with Canva's project managers, art directors, and lead director.</p>
+          </div>
+        </li>
+        <li class="exp-item">
+          <span class="exp-period">Mar 2015 — Present</span>
+          <div>
+            <p class="exp-role">Photographer · Videographer · Content Creator</p>
+            <p class="exp-company">ARGAUW Photography · Freelance · Germany &amp; Indonesia</p>
+            <p class="exp-detail">Expert across multiple styles of photography, videography, and editing. Specialized in content production for digital ads and social-first campaigns, commercial and editorial photography, and documentation. Active on Instagram since 2012 (Instagram Suggested User in 2015), nurturing a creative community of 60K+ followers. Worked with respected local and international clients — individuals, brands, companies, and agencies — for over a decade.</p>
+          </div>
+        </li>
+        <li class="exp-item">
+          <span class="exp-period">2016 — 2019</span>
+          <div>
+            <p class="exp-role">Partner</p>
+            <p class="exp-company">Canon Inc. · Contract · Germany</p>
+            <p class="exp-detail">Partnered photographer and creator for Canon Deutschland — producing creative content and contributing to content strategy across campaigns.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs">
+    <p class="section-label">Certifications</p>
+    <h2 class="section-title">Digital Marketing <em>Certification</em></h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <img src="assets/certs/myskill-1.jpg" alt="MySkill Digital Marketing Fullstack Intensive Bootcamp Certificate of Completion awarded to Argatyana Unggul Wibawa" loading="lazy" />
+        <div class="cert-caption">
+          <span class="cert-title">Digital Marketing: Fullstack Intensive Bootcamp</span>
+          <span class="cert-meta">MySkill · Batch 33 · Awarded Jan 2026</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <img src="assets/certs/myskill-2.jpg" alt="MySkill Digital Marketing Fullstack Intensive Bootcamp curriculum topics" loading="lazy" />
+        <div class="cert-caption">
+          <span class="cert-title">Bootcamp Curriculum &amp; Topics</span>
+          <span class="cert-meta">21 modules · Strategy, Paid Ads, SEO &amp; Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-left">
+      <h2 class="contact-title">Let's work<br /><em>together!</em></h2>
+      <p class="contact-body">
+        Available for creative strategy, brand campaigns, and content production — local and international. Let's build something authentic.
+      </p>
+      <a href="mailto:wibawa.ig@gmail.com" class="btn-primary" style="display: inline-block;">Send a Message</a>
+    </div>
+    <div class="contact-right">
+      <a href="mailto:wibawa.ig@gmail.com" class="contact-link">
+        <div>
+          <span class="contact-link-label">Personal Email</span>
+          <span class="contact-link-value">wibawa.ig@gmail.com</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/argauw/" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">linkedin.com/in/argauw</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.instagram.com/argauw/" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <div>
+          <span class="contact-link-label">Instagram</span>
+          <span class="contact-link-value">instagram.com/argauw</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://saujanaproject.com/" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <span class="contact-link-label">Agency</span>
+          <span class="contact-link-value">saujanaproject.com</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="#" class="contact-link">
+        <div>
+          <span class="contact-link-label">Based in</span>
+          <span class="contact-link-value">Malang, Indonesia</span>
+        </div>
+        <span class="contact-arrow">🌏</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Argatyana U. Wibawa. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/argauw/" target="_blank">LinkedIn</a>
+      <a href="https://saujanaproject.com/" target="_blank">Saujana Project</a>
+      <a href="mailto:wibawa.ig@gmail.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
